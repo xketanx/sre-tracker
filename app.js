@@ -67,6 +67,12 @@ for (let day = 1; day <= 180; day++) {
   
   if (month === 1) {
     // Month 1: Foundation & Programming
+    const leetcodeTopics = [
+      'https://leetcode.com/tag/array/',
+      'https://leetcode.com/tag/string/',
+      'https://leetcode.com/tag/hash-table/',
+      'https://leetcode.com/tag/linked-list/'
+    ];
     tasks.push({
       id: `d${day}t1`,
       title: `LeetCode: 3 ${['Array', 'String', 'Hash Table', 'Two Pointers'][day % 4]} Problems`,
@@ -74,10 +80,16 @@ for (let day = 1; day <= 180; day++) {
       duration: "60min",
       category: "Coding",
       points: 15,
-      resources: "https://leetcode.com/problemset/all/",
+      resources: leetcodeTopics[day % 4],
       preTask: "Review problem patterns and data structures",
       postTask: "Document solutions and time complexity"
     });
+    const linuxResources = [
+      'https://linuxjourney.com/',
+      'https://www.kernel.org/doc/html/latest/filesystems/',
+      'https://www.brendangregg.com/linuxperf.html',
+      'https://www.geeksforgeeks.org/linux-tutorial/'
+    ];
     tasks.push({
       id: `d${day}t2`,
       title: `Linux: ${['Process Management', 'File Systems', 'Networking', 'Shell Scripting'][day % 4]}`,
@@ -85,7 +97,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "90min",
       category: "Linux",
       points: 20,
-      resources: "https://linuxjourney.com/",
+      resources: linuxResources[day % 4],
       preTask: "Set up Linux environment or WSL",
       postTask: "Practice commands and create cheat sheet"
     });
@@ -104,6 +116,12 @@ for (let day = 1; day <= 180; day++) {
     }
   } else if (month === 2) {
     // Month 2: Cloud & Infrastructure
+    const gcpResources = [
+      'https://cloud.google.com/compute/docs',
+      'https://cloud.google.com/storage/docs',
+      'https://cloud.google.com/functions/docs',
+      'https://cloud.google.com/load-balancing/docs'
+    ];
     tasks.push({
       id: `d${day}t1`,
       title: `GCP: ${['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'Load Balancing'][day % 4]}`,
@@ -111,7 +129,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "90min",
       category: "Cloud",
       points: 25,
-      resources: "https://cloud.google.com/docs",
+      resources: gcpResources[day % 4],
       preTask: "Set up GCP free tier account",
       postTask: "Complete hands-on lab exercises"
     });
@@ -122,7 +140,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "75min",
       category: "Cloud",
       points: 20,
-      resources: "https://learn.hashicorp.com/terraform",
+      resources: "https://developer.hashicorp.com/terraform/tutorials",
       preTask: "Install Terraform CLI",
       postTask: "Deploy sample infrastructure"
     });
@@ -133,12 +151,18 @@ for (let day = 1; day <= 180; day++) {
       duration: "45min",
       category: "Coding",
       points: 15,
-      resources: "https://leetcode.com/",
+      resources: "https://leetcode.com/company/google/",
       preTask: "Review algorithm patterns",
       postTask: "Analyze solution complexity"
     });
   } else if (month === 3) {
     // Month 3: Monitoring & SRE
+    const monitoringResources = [
+      'https://prometheus.io/docs/prometheus/latest/getting-started/',
+      'https://grafana.com/docs/grafana/latest/getting-started/',
+      'https://prometheus.io/docs/alerting/latest/alertmanager/',
+      'https://prometheus.io/docs/prometheus/latest/querying/basics/'
+    ];
     tasks.push({
       id: `d${day}t1`,
       title: `Monitoring: ${['Prometheus Setup', 'Grafana Dashboards', 'Alertmanager', 'PromQL Queries'][day % 4]}`,
@@ -146,7 +170,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "90min",
       category: "Monitoring",
       points: 25,
-      resources: "https://prometheus.io/docs/",
+      resources: monitoringResources[day % 4],
       preTask: "Install monitoring tools",
       postTask: "Create custom dashboards"
     });
@@ -157,7 +181,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "60min",
       category: "Monitoring",
       points: 20,
-      resources: "https://sre.google/books/",
+      resources: "https://sre.google/sre-book/table-of-contents/",
       preTask: "Read SRE book chapter",
       postTask: "Define SLOs for sample service"
     });
@@ -168,12 +192,18 @@ for (let day = 1; day <= 180; day++) {
       duration: "60min",
       category: "Linux",
       points: 18,
-      resources: "https://www.brendangregg.com/",
+      resources: "https://www.brendangregg.com/linuxperf.html",
       preTask: "Review system metrics",
       postTask: "Practice performance analysis"
     });
   } else if (month === 4) {
     // Month 4: Kubernetes & System Design
+    const k8sResources = [
+      'https://kubernetes.io/docs/concepts/workloads/pods/',
+      'https://kubernetes.io/docs/concepts/services-networking/',
+      'https://kubernetes.io/docs/concepts/configuration/',
+      'https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/'
+    ];
     tasks.push({
       id: `d${day}t1`,
       title: `Kubernetes: ${['Pods & Deployments', 'Services & Ingress', 'ConfigMaps & Secrets', 'StatefulSets'][day % 4]}`,
@@ -181,7 +211,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "90min",
       category: "Cloud",
       points: 25,
-      resources: "https://kubernetes.io/docs/",
+      resources: k8sResources[day % 4],
       preTask: "Set up local K8s cluster",
       postTask: "Deploy sample applications"
     });
@@ -203,7 +233,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "60min",
       category: "Cloud",
       points: 20,
-      resources: "https://training.linuxfoundation.org/",
+      resources: "https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/",
       preTask: "Review CKA curriculum",
       postTask: "Complete practice questions"
     });
@@ -216,7 +246,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "75min",
       category: "Monitoring",
       points: 23,
-      resources: "https://sre.google/workbook/",
+      resources: "https://sre.google/workbook/table-of-contents/",
       preTask: "Study incident examples",
       postTask: "Write sample post-mortem"
     });
@@ -273,7 +303,7 @@ for (let day = 1; day <= 180; day++) {
       duration: "45min",
       category: "Interview",
       points: 15,
-      resources: "https://www.careercup.com/",
+      resources: "https://www.techinterviewhandbook.org/",
       preTask: "Review job descriptions",
       postTask: "Submit applications"
     });
@@ -692,6 +722,23 @@ function resetProgress() {
     displayRandomQuote();
     showModal('🔄', 'Reset Complete', 'Your progress has been reset. Time to start fresh!');
   });
+}
+
+// Toggle Resource Hub
+function toggleResourceHub() {
+  const hub = document.getElementById('resourceHub');
+  const tasksContainer = document.getElementById('tasksContainer');
+  const btn = document.getElementById('resourceHubBtn');
+  
+  if (hub.classList.contains('hidden')) {
+    hub.classList.remove('hidden');
+    tasksContainer.classList.add('hidden');
+    btn.textContent = '← Back to Tasks';
+  } else {
+    hub.classList.add('hidden');
+    tasksContainer.classList.remove('hidden');
+    btn.textContent = '📚 Resource Hub';
+  }
 }
 
 // Initialize on load
